@@ -1,0 +1,40 @@
+body {
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+#container {
+  width: 95%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#time {
+  width: 50vh;
+  margin: auto;
+  text-align: center;
+  color: darkblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 60px;
+  padding: 50px;
+  border: 5px darkblue solid;
+}
+
+@media(max-width:360px) {
+  #time {
+    width: 30vh;
+    font-size: 48px;
+    padding: 50px;
+  }
+}
+@media(max-width:320px) {
+  #time {
+    width: 40vh;
+    font-size: 45px;
+    padding: 30px;
+
+  }
+}
