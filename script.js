@@ -1,4 +1,6 @@
-async function startTime() {
+let snapshotTime
+
+function startTime() {
   const today = new Date()
   let h = today.getHours()
   let m = today.getMinutes()
@@ -9,24 +11,18 @@ async function startTime() {
   setTimeout(startTime, 1000)
 }
 
-async function timeAhead() {
-  // clearTimeout(timeAheadTimeout)
-  const time = new Date()
-  let h = time.getHours() + 8
-  let m = time.getMinutes()
-  let s = time.getSeconds()
-
+function takeSnapshot(i) {
+  const currentTime = new Date()
+  let h = currentTime.getHours() + i
+  let m = currentTime.getMinutes()
   h = checkHour(h)
   m = checkTime(m)
-  s = checkTime(s)
-
-  document.getElementById('timeAhead').innerHTML = h + ':' + m + ':' + s
-  timeAheadTimeout = setTimeout(timeAhead, 1000)
+  snapshotTime = h + ':' + m
+  document.getElementById('timeAhead').innerHTML = snapshotTime
 }
 
 function clearTime() {
   document.getElementById('timeAhead').innerHTML = ''
-  clearTimeout(timeAheadTimeout)
 }
 
 function checkHour(h) {

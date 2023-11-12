@@ -11,13 +11,18 @@
   <div id="container">
     <div id="clock">
       <h1 id="time"></h1>
-      <button onclick="timeAhead()">Check the time 8 hours ahead</button>
-      <button onclick="clearTime()">Clear Time</button>
+    </div>
+
+    <div id="timeDisplay">
+      <p>You can start eating at:</p>
       <h2 id="timeAhead"></h2>
     </div>
 
-    <div>
-      
+    <div id="btn">
+      <button onclick="takeSnapshot(12)">12 hour fast</button>
+      <button onclick="takeSnapshot(16)">16/8 hour fast</button>
+      <button onclick="takeSnapshot(24)">24 hour fast</button>
+      <button onclick="clearTime()">Clear Time</button>
     </div>
 
 
